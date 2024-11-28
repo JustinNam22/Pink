@@ -1,0 +1,776 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    color: #333;
+    background-image: url('https://64.media.tumblr.com/a964458bee35dd2c7411a70b0125c437/tumblr_npeokel6ip1qzxxsgo1_500.gifv');
+    background-repeat: no-repeat;   /* Prevents the background from repeating */
+    background-size: cover;         /* Ensures the background covers the entire viewport */
+    width: 100%;
+    height: 100vh;                  /* Full viewport height */
+    background-position: center;    /* Centers the background image */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    color: #a16b25;
+    font-size: 39px;
+    font-family: "Anton", sans-serif;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 27px;
+    text-align: center;
+}
+
+h3 {
+    color: black;
+    margin-bottom: 10px;
+    font-size: 27px;
+    margin-top: 33px;
+    text-align: center;
+}
+
+
+.post {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background: #fafafa;
+}
+
+.post_container {
+    position: relative;
+    width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff; /* White background */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Remove opacity to ensure the background is not transparent */
+    /* opacity: 0.91; */
+    max-height: 750px; /* Set a maximum height */
+    overflow-y: auto;  /* Enable vertical scrolling */
+}
+
+.post_container h1{
+    border-bottom: 4px solid #a16b25;
+    padding-bottom: 6px;
+    text-decoration: none;
+}
+
+.post_container p{
+    margin: 5px 0;
+}
+
+.post h3 a {
+    color: rgb(55, 56, 58);  /* Sets the title color to black */
+    text-decoration: none;  /* Optional: Removes underline from the link */
+    text-align: left;
+}
+
+.post h3 a:hover{
+    color: #8b6a04;
+}
+
+.home_container {
+    width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;  /* Solid white background */
+    border-radius: 8px;
+
+    position: relative;
+    z-index: 1;
+    
+    max-height: 97vh;        /* Set a maximum height (you can adjust this value) */
+    overflow-y: auto;        /* Enables vertical scrolling */
+}
+
+form {
+    margin: 0 2rem;
+}
+
+/* Form Title */
+.form-title {
+    font-size: 39px;
+    font-weight: 700;
+    text-align: center;
+    padding: 1.3rem;
+    margin-bottom: 0.4rem;
+
+}
+
+/* Input Field */
+input {
+    flex: 10;
+    color: inherit;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    padding: 0 0.4em;
+    border-left: solid 1px hsla(0, 0%, 0%, 0.4);
+    
+}
+
+input:focus {
+    border-left: solid 1px hsla(240, 73%, 71%, 1);
+}
+
+/* Input Group */
+.input-group {
+    padding: 1% 0;
+    position: relative;
+    background-color: hsla(227, 63%, 18%, 0.07);
+    margin: 1em auto;
+    border-radius: 12px;
+    display: flex;
+    padding: 0.7em 0.1em;
+}
+
+.input-group i {
+    flex: 1;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-group:focus-within i {
+    color:#a16b25;;
+}
+
+/* Password Field */
+.input-group.passwords i:first-child {
+    flex: 1.1;
+}
+
+/* Error Message */
+.error {
+    position: absolute;
+    left: 2em;
+    bottom: -1em;
+}
+
+.error p {
+    color: red;
+    font-weight: 500;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+
+/* OR Text */
+.or {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+
+
+/* Dont Have Account line of words */
+.links {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 4rem;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.links a {
+    text-decoration: none; /* This removes the underline */
+    color:  #a16b25;
+}
+
+
+
+/* Error Main */
+.error-main {
+    background-color: brown;
+    padding: 0.5em 1em;
+    border-radius: 12px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.error-main p {
+    color: red;
+    background-color: pink;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* User Details */
+.user-details {
+    margin-top: 5em;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.user-details p {
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.user-details p:first-child {
+    text-decoration: underline;
+    margin-bottom: 2em;
+    font-weight: 600;
+}
+
+.user-details a {
+    display: block;
+    text-align: center;
+    text-decoration-color: rgb(125, 125, 235);
+    color: rgb(125, 125, 235);
+    transition: 5ms;
+}
+
+.user-details a:hover {
+    color: blue;
+    text-decoration-color: blue;
+}
+
+
+
+
+
+.container.description {
+    color: hsl(210, 8%, 42%) !important;
+}
+
+label {
+    font-weight: 600;
+    margin: 10px 0 5px;
+    display: block
+}
+input[type="text-post"],textarea,select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        input[type="file"] {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            width: 100%;
+            background: linear-gradient(45deg, #a16b25, rgb(212, 160, 3));
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        button:hover {
+            background: linear-gradient(45deg, rgb(212, 160, 3), #a16b25);
+            transform: translateY(-1px);
+        }
+
+        input[type="file" i] {
+            appearance: none;
+            background-color: initial;
+            cursor: default;
+            align-items: baseline;
+            color: inherit;
+            text-overflow: ellipsis;
+            text-align: start !important;
+            padding: initial;
+            border: initial;
+            white-space: pre;
+            overflow: hidden !important;
+        }
+
+        .post-meta {
+            margin-bottom: 20px;
+            color: #555;
+            font-size: 16px;
+        }
+        .post-meta p {
+            margin: 5px 0;
+        }
+        .post-content {
+            line-height: 1.8;
+            color: #333;
+            font-size: 16px;
+        }
+        .post-content img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 20px;
+            cursor: pointer; /* Indicates that the image is clickable */
+        }
+
+
+        .back-home:hover {
+            background: linear-gradient(45deg, black, rgb(57, 57, 57));
+            transform: translateY(-1px);
+        }
+        
+        .back-home {
+            display: block; /* Makes the button a block-level element */
+            padding: 12px 24px;
+            font-size: 16px;
+            color: #fff;
+            background: linear-gradient(45deg, rgb(57, 57, 57), black);
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.3s ease;
+            margin: 70px auto 0; /* Centers horizontally with auto margin */
+            font-weight: bold;
+            text-align: center; /* Center the text inside the button */
+            width: fit-content; /* Ensures the width adapts to content */
+            margin-top:30px;
+        } 
+
+        .error-message {
+            color: #d9534f;
+            background-color: #f2dede;
+            border: 1px solid #ebccd1;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .answer {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.answer .comment {
+    font-size: 21px;
+    font-weight: 250;
+    display: inline-block; /* Makes it inline with the next element */
+    margin-right: 10px; /* Optional, to add some space between "comment" and the date */
+}
+
+p.comment-date {
+    display: inline-block; /* Keeps this element inline with the comment */
+    margin-left: 10px; /* Adjust margin if necessary */
+    color:rgb(125, 1, 1);
+    font-weight: bold;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(45deg, rgb(57, 57, 57), black);
+    border-radius: 30px;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.back-link:hover {
+    background: linear-gradient(45deg, black, rgb(57, 57, 57));
+}
+
+.container {
+    width: 30%;
+    height: 400px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 1px;
+    overflow-y: auto;  
+}
+
+.container button{
+    padding: 20px 220px;
+    font-size: 20px;
+    border-radius: 30px;
+}
+
+
+
+.contact-content{
+    margin-top: 48px;
+}
+
+.contact-info{
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-info i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+}
+.contact-form{
+    font-size: 15px;
+}
+.contact-form .form-control{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.content-section {
+    position: relative;
+    z-index: 10; 
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 1000px;
+    margin: 50px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 205px;
+}
+
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 10px;
+}
+
+.col-full{
+    width: 100%;
+}
+.col-half{
+    width: 50%;
+}
+.col-third{
+    width: 33.33333%;
+}
+
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+    border-radius: 10px;
+}
+
+.row::after{
+    content:"";
+    display: block;
+    clear: both;
+}
+.description{
+    color:hsl(210,8%,42%);
+}
+
+.message {
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    max-width: 500px;
+    text-align: center;
+}
+
+.message p {
+    margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .profile-check {
+        width: 70%;
+        margin: 50px auto;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .profile-check {
+        width: 85%;
+        margin: 30px auto;
+        padding: 15px;
+    }
+    .background {
+        height: auto;
+    }
+    .content-section {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-check {
+        width: 100%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+    .btn {
+        font-size: 1rem;
+        padding: 0.5em 0;
+    }
+    input {
+        font-size: 14px;
+    }
+    .links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .form-title {
+        font-size: 1.2rem;
+    }
+    .btn {
+        font-size: 0.9rem;
+    }
+    .input-group {
+        padding: 0.5em 0.2em;
+    }
+    .links {
+        padding: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .profile-check {
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .btn {
+        padding: 0.4em 0;
+    }
+    .error-main p {
+        font-size: 12px;
+    }
+    .input-group i {
+        font-size: 0.9rem;
+    }
+}
+
+ul{
+    list-style: none;
+}
+li {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px; 
+}
+
+
+
+
+
+
+
+/* Admin button, contact admin button */
+a.contact_admin_button{
+    display: inline-block;
+    background: linear-gradient(45deg, rgb(57, 57, 57), black);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+a.contact_admin_button:hover {
+    background: linear-gradient(45deg, black, rgb(57, 57, 57));
+}
+
+a.admin_login_button {
+    display: inline-block;
+    background: linear-gradient(45deg, rgb(63, 62, 62), black);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+a.admin_login_button:hover {
+    background: linear-gradient(45deg, black, rgb(63, 62, 62));
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+ul li:hover {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+p {
+    margin-bottom: 15px;
+}
+
+p strong {
+    display: inline-block;
+    width: 100px;
+    font-weight: bold;
+}
+
+button.button {
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.button:hover {
+    background-color: #e60000;
+}
+
+/* General reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the form */
+.form-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Heading */
+.form-container h1 {
+    font-size: 39px;
+    margin-bottom: 39px;
+    color: #2c3e50;
+}
+
+/* Input fields */
+input[type="texts"], input[type="passwords"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="texts"]:focus, input[type="passwords"]:focus {
+    border-color: #3498db;
+}
+
+
+
+
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .form-container {
+        padding: 1.5rem;
+    }
+
+    input[type="text"], input[type="passwords"], button {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+
+    .form-container h1 {
+        font-size: 39px;
+    }
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container button {
+    position: absolute;
+    right: 10px;
+    padding: 0.5rem;
+    background: transparent;
+    border: none;
+    color: #3498db;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.additional-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.additional-links a {
+    display: block;
+    margin: 5px 0;
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.additional-links a:hover {
+    text-decoration: underline;
+}
+
